@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiTestSample.Sort">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <!-- For the navigation Back to the main page-->
+            <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="#254f6e">
+                <Label Text=" Sort By " Style="{StaticResource TitleStyle}"/>
+                <Button Image="cancel.png" HorizontalOptions="End" HeightRequest="50" WidthRequest="50" BackgroundColor="#0f70b7" Clicked="GoBack" />
+            </StackLayout>
+
+            <Frame HasShadow="True" OutlineColor="#7d8a6c" Padding="15" Margin="15"  >
+                <StackLayout >
+                    <Frame HasShadow="True" OutlineColor="#7d8a6c" Padding="30" Margin="30" >
+                        <StackLayout >
+                            <Label Text="Name" Style="{StaticResource LabelStyle}" TextColor="#fdc81f" />
+                            <BoxView HeightRequest="1" WidthRequest="80" BackgroundColor="Silver" VerticalOptions="Center" Margin="-5,0,-5,0"/>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer  Tapped="OnClickSortByNameNoSort" NumberOfTapsRequired="1"/>
+                                    <!--<TapGestureRecognizer Command="SortByNameNoSortCommand" NumberOfTapsRequired="1"/>-->
+                                </StackLayout.GestureRecognizers>
+                                <Image Source="radiobuttonunchecked.png" HeightRequest="25" x:Name="button1" AutomationId="ImageNoSort"/>
+                                <Label x:Name="label" Text="No Sort" AutomationId="LabelNoSort"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer  Tapped="OnClickSortByNameAtoZ" NumberOfTapsRequired="1"/>
+                                    <!--<TapGestureRecognizer Command="SortByNameAtoZCommand" NumberOfTapsRequired="1"/>-->
+                                </StackLayout.GestureRecognizers>
+                                <Image Source="radiobuttonunchecked.png" HeightRequest="25" x:Name="button2" AutomationId="ImageAtoZ"/>
+                                <Label x:Name="label1" Text="A to Z" AutomationId="LabelAtoZ"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer   Tapped="OnClickSortByNameZtoA" NumberOfTapsRequired="1"/>
+                                    <!--<TapGestureRecognizer Command="SortByNameZtoACommand" NumberOfTapsRequired="1"/>-->
+                                </StackLayout.GestureRecognizers>
+                                <Image Source="radiobuttonunchecked.png" HeightRequest="25" x:Name="button3" AutomationId="ImageZtoA"/>
+                                <Label x:Name="label2" Text="Z to A" AutomationId="LabelAtoZ"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame HasShadow="True" OutlineColor="#7d8a6c" Padding="30" Margin="30">
+                        <StackLayout>
+                            <Label Text="Code" Style="{StaticResource LabelStyle}" TextColor="#fdc81f"/>
+                            <BoxView HeightRequest="1" WidthRequest="80" BackgroundColor="Silver" VerticalOptions="Center" Margin="-5,0,-5,0"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer  Tapped="OnClickSortByCodeNoSort" NumberOfTapsRequired="1"/>
+                                    <!--<TapGestureRecognizer Command="SortByCodeNoSortCommand" NumberOfTapsRequired="1"/>-->
+                                </StackLayout.GestureRecognizers>
+                                <Image Source="radiobuttonunchecked.png" HeightRequest="25" x:Name="buttonCode1"/>
+                                <Label x:Name="label3" Text="No Sort"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnClickSortByCodeAsc" NumberOfTapsRequired="1"/>
+                                    <!--<TapGestureRecognizer Command="SortByCodeAscCommand" NumberOfTapsRequired="1"/>-->
+                                </StackLayout.GestureRecognizers>
+                                <Image Source="radiobuttonunchecked.png" HeightRequest="25" x:Name="buttonCode2"/>
+                                <Label x:Name="label4" Text="Asc"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer  Tapped="OnClickSortByCodeDesc" NumberOfTapsRequired="1"/>
+                                    <!--<TapGestureRecognizer Command="SortByCodeDescCommand" NumberOfTapsRequired="1"/>-->
+                                </StackLayout.GestureRecognizers>
+                                <Image Source="radiobuttonunchecked.png" HeightRequest="25" x:Name="buttonCode3"/>
+                                <Label x:Name="label5" Text="Desc"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

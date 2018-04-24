@@ -5,7 +5,8 @@
   <ContentView.Content>
       <StackLayout>
             <Button Text="Navigate To Elements" Clicked="Navigate_Element_Command" AutomationId="ButtonElement" ></Button>
-            <Button Text="Navigate To cars Gallery" Clicked="Navigate_Command" AutomationId="ButtonGallery"></Button>          
+            <Button Text="Navigate To cars Gallery" Clicked="Navigate_Command" AutomationId="ButtonGallery"></Button>
+            <Button Text="Navigate To Radio Button" Clicked="Navigate_Radio_Command" AutomationId="ButtonRadio"></Button>
         </StackLayout>
   </ContentView.Content>
 </ContentView>

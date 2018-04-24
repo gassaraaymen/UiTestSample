@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiTestSample.Views.ListNote">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Clicked="OnDelete" Text="Delete"></Button>
+                <Button Clicked="OnUpdate" Text="Update"></Button>
+            </StackLayout>
+
+            <Label Text="Save Your Notes:"></Label>
+            <Entry Placeholder="Enter Notes Title" x:Name="Title"></Entry>
+            <Entry Placeholder="Enter Notes Description" x:Name="Description"></Entry>
+            <Button Text="ADD NOTE" Clicked="OnAdd"></Button>
+
+            <Label Text="Saved Notes" VerticalOptions="End"></Label>
+            <ListView VerticalOptions="EndAndExpand" x:Name="mylistview">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Title}" Detail="{Binding Desc}">
+                            <TextCell.ContextActions>
+                                <MenuItem Text="Delete" CommandParameter="{Binding .}" IsDestructive="True" Clicked="OnDelete"></MenuItem>
+                                <MenuItem Text="Update" CommandParameter="{Binding .}" IsDestructive="True" Clicked="OnUpdate"></MenuItem>
+                            </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

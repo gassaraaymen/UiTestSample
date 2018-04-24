@@ -18,6 +18,8 @@
             <StackLayout VerticalOptions="CenterAndExpand">
             <ListView x:Name="myListView" AutomationId="ListViewN"></ListView>
         </StackLayout>
+            <StackLayout>     
+            </StackLayout>
             <StackLayout>
                 <DatePicker AutomationId="DatePickerA"></DatePicker>
             </StackLayout>

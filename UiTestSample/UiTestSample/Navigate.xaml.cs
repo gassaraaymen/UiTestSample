@@ -11,8 +11,7 @@ namespace UiTestSample
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Navigate : ContentView
-    {
-        private CarsGallery MainPage;
+    {  
 
         public Navigate()
         {
@@ -23,6 +22,12 @@ namespace UiTestSample
         {            
             Navigation.PushModalAsync(new CarsGallery());
         }
+
+        private void Navigate_Radio_Command(object sender, ClickedEventArgs e)
+        {
+            Navigation.PushModalAsync(new Sort());
+        }
+
         private void Navigate_Element_Command(object sender, ClickedEventArgs e)
         {           
             Navigation.PushModalAsync(new Elements());

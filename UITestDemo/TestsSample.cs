@@ -32,45 +32,43 @@ namespace UITest
         }
 
         [Test]
-        public void SwipeRight()
-        {
-            app.SwipeRightToLeft();
-        }
-
-        [Test]
-        public void SwipeLeft()
-        {
-            app.SwipeLeftToRight();
-        }
-
-        [Test]
         public void Introduction()
         {
-            app.Screenshot("Home Page");
+            AppLaunches();
             app.Tap("ImageUi");
             app.Screenshot("Introduction");
         }
 
-
         [Test]
         public void DatePicker()
         {
+            AppLaunches();
             app.Tap(x => x.Marked("Gallery"));
+            app.Screenshot("Gallery");
             app.Tap(x => x.Marked("ButtonElement"));
+            app.Screenshot("Element");
             app.Tap(x => x.Marked("DatePickerA"));
+            app.Screenshot("DatePicker");
             app.Tap(x => x.Id("date_picker_header_year"));
+            app.Screenshot("YearView");
             app.Tap(x => x.Text("2019"));
             app.Tap(x => x.Id("next"));
+            app.Screenshot("MonthView");
             app.Tap(x => x.Id("button1"));
         }
 
         [Test]
         public void CarsGallery()
         {
+            AppLaunches();
             app.Tap(x => x.Marked("Gallery"));
-            app.Tap(x => x.Marked("ButtonGallery"));            
+            app.Screenshot("Gallery");
+            app.Tap(x => x.Marked("ButtonGallery"));
+            app.Screenshot("CarsGallery");
             app.SwipeLeftToRight();
-            app.SwipeRightToLeft();                
+            app.Screenshot("Car1");
+            app.SwipeRightToLeft();
+            app.Screenshot("Car2");
         }
 
         [Test]
@@ -79,34 +77,43 @@ namespace UITest
             app.Repl();
         }
 
-
         [Test]
         public void Picker()
         {
+            AppLaunches();
             app.Tap(x => x.Marked("Gallery"));
             app.Tap(x => x.Marked("ButtonElement"));
             app.Tap(x => x.Marked("PickerC"));
+            app.Screenshot("Picker");
             app.Tap(x => x.Text("Mauritania"));
+            app.Screenshot("Mauritania Selected");
         }
 
         [Test]
         public void ListView()
         {
+            AppLaunches();
             app.Tap(x => x.Marked("Gallery"));
             app.Tap(x => x.Marked("ButtonElement"));
+            app.Screenshot("ListView");
             app.Tap(x => x.Class("TextCellRenderer_TextCellView"));
+            app.Screenshot("Aymen Selected");
             app.Tap(x => x.Id("button2"));
             app.Tap(x => x.Text("Emna"));
+            app.Screenshot("Emna Selected");
             app.Tap(x => x.Id("button2"));
             app.Tap(x => x.Text("Mounir"));
+            app.Screenshot("Mounir Selected");
             app.Tap(x => x.Id("button2"));
             app.Tap(x => x.Text("Fawzi"));
+            app.Screenshot("Fawzi Selected");
             app.Tap(x => x.Id("button2"));
         }
 
         [Test]
         public void Switcher()
         {
+            AppLaunches();
             app.Tap("Switch");
             app.Screenshot("Switch On");
             app.Tap("SwitchA");
@@ -116,22 +123,28 @@ namespace UITest
         }
 
         [Test]
-        public void SelectPicker()
+        public void RadioButton()
         {
-            app.Tap("Gallery");
-            app.Tap("PickerC");            
-            app.Tap("Morocco");
+            AppLaunches();
+            app.Tap(x => x.Marked("Gallery"));
+            app.Tap("ButtonRadio");
+            app.Screenshot("ButtonRadio");
+            app.Tap("ImageNoSort");
+            app.Screenshot("ImageNoSort Selected");
+            app.Tap("ImageAtoZ");
+            app.Screenshot("ImageAtoZ Selected");
+            app.Tap("ImageZtoA");
+            app.Screenshot("ImageZtoA Selected");
         }
 
         [Test]
         public void Slider()
         {
+            AppLaunches();
             app.Tap("Switch");
-            app.SetSliderValue("SliderA", 10);
-            app.SetSliderValue("SliderA", 50);
-            app.SetSliderValue("SliderA", 100);
-            app.SetSliderValue("SliderA", 150);
-            app.SetSliderValue("SliderA", 300);
+            app.Screenshot("Slider");
+            app.SetSliderValue("SliderA", 200);
+            app.Screenshot("SliderChanged");
         }
 
         [Test]
@@ -140,11 +153,12 @@ namespace UITest
 
 
             // Arrange (Prepare Our Environment)
-            app.Screenshot("Add text");
+            AppLaunches();
             app.Tap("Calculator");
+            app.Screenshot("Fill The Blank");
             app.EnterText("EntryA", "5");
             app.EnterText("EntryB", "7");
-
+            app.Screenshot("value setted up");
             // Act
 
             app.Tap("ButtonAdd");
@@ -161,11 +175,12 @@ namespace UITest
         public void Multiply_5_To_7_Returns_35_UITest()
         {
             // Arrange (Prepare Our Environment)
-            app.Screenshot("Add text");
+            AppLaunches();
             app.Tap("Calculator");
+            app.Screenshot("Fill The Blank");
             app.EnterText("EntryA", "5");
             app.EnterText("EntryB", "7");
-
+            app.Screenshot("value setted up");
             // Act
 
             app.Tap("ButtonMultiply");
