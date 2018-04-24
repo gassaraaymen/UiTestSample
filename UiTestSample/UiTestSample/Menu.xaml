@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiTestSample.Menu">
+
+
+    <TabbedPage.Children>
+        <ContentPage Title="Home">
+            <ContentView x:Name="Home"/>
+        </ContentPage>
+        <ContentPage Title="Calculator">
+            <ContentView x:Name="Calc"/>
+        </ContentPage>
+        <ContentPage Title="Switch">
+            <ContentView x:Name="Switch"/>
+        </ContentPage>
+        <ContentPage Title="Gallery">
+            <ContentView x:Name="Navigate"/>
+        </ContentPage>
+    </TabbedPage.Children>
+
+
+</TabbedPage>

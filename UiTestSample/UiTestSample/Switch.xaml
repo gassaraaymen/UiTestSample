@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiTestSample.Switch">
+  <ContentView.Content>
+        <StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Image Source="off" x:Name="MyImg"></Image>
+            <Switch x:Name="mySwitch" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" AutomationId="SwitchA"></Switch>
+        </StackLayout>
+            <StackLayout>
+                <Slider Minimum="0" Maximum="100" x:Name="MainSlider" ValueChanged="MainSlider_OnValueChanged" AutomationId="SliderA"></Slider>
+                <Label x:Name="MainLabel" FontSize="120"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

@@ -13,7 +13,7 @@ namespace UiTestSample
 		{
 			InitializeComponent();
 
-			MainPage = new UiTestSample.MainPage();
+            MainPage = new UiTestSample.Menu();
 		}
 
 		protected override void OnStart ()

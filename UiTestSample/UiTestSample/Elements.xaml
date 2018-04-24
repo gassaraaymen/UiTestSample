@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiTestSample.Elements">
+  <ContentView.Content>
+        <StackLayout>
+            <StackLayout>
+                <Picker x:Name="myPicker" Title="Select your country" AutomationId="PickerC">
+                    <Picker.Items>
+                        <x:String>Algeria</x:String>
+                        <x:String>Morocco</x:String>
+                        <x:String>Egypt</x:String>
+                        <x:String>Libya</x:String>
+                        <x:String>Mauritania</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+            <ListView x:Name="myListView" AutomationId="ListViewN"></ListView>
+        </StackLayout>
+            <StackLayout>
+                <DatePicker AutomationId="DatePickerA"></DatePicker>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Return To Home Page" Clicked="Return_To_Home_Page" AutomationId="ButtonHome"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentPage>

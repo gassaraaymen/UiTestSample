@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiTestSample.CarsGallery">
+
+ 
+    <CarouselPage.Children>
+      
+        <ContentPage Title="Start Page">
+            <Image x:Name="Car1"></Image>
+        </ContentPage>
+      
+        <ContentPage Title="Car 2">
+            <Image x:Name="Car2"></Image>
+        </ContentPage>
+        
+        <ContentPage Title="Car 3">
+            <Image x:Name="Car3"></Image>
+        </ContentPage>
+
+    </CarouselPage.Children>
+        
+   
+</CarouselPage>

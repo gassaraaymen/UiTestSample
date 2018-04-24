@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EE9DCEBC-26A1-44E2-A33C-E426DA029CE4}</ProjectGuid>
+    <ProjectGuid>{848FC5C3-DA45-4754-A456-01EF070B9BCE}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>UITest</RootNamespace>
-    <AssemblyName>UITest</AssemblyName>
+    <RootNamespace>UITestDemo</RootNamespace>
+    <AssemblyName>UITestDemo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -37,7 +37,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseTest.cs" />
     <Compile Include="TestsSample.cs" />
     <Compile Include="AppInitializer.cs" />
   </ItemGroup>
@@ -46,16 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UiTestSample\UiTestSample.Android\UiTestSample.Android.csproj">
-      <Project>{c2d482cc-4188-4212-924f-2d6c962e9918}</Project>
-      <Name>UiTestSample.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UiTestSample\UiTestSample\UiTestSample.csproj">
-      <Project>{c2515e37-b3df-4529-beb6-9b9bbf066b8e}</Project>
-      <Name>UiTestSample</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

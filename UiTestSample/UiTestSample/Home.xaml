@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiTestSample.Home">
+  <ContentView.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="40,10,10,10">
+            <Label Text="Xamarin.UITest,is an Automated UI Acceptance Testing framework based on Calabash that allows programmers to write and execute tests in C# and NUnit that validate the functionality of iOS and Android Apps." VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="22" x:Name="MyLabel"></Label>
+            <Image Source="UITest" x:Name="MyImg" AutomationId="ImageUi"></Image>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

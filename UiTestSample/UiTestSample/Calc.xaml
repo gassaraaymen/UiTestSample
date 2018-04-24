@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiTestSample.Calc">
+  <ContentView.Content>
+        <StackLayout Orientation="Vertical">
+            <Entry x:Name="ValueAEntry" AutomationId="EntryA" FontSize="40"/>
+            <Entry x:Name="ValueBEntry" AutomationId="EntryB" FontSize="40"/>
+            <Button Text="Add"
+                BackgroundColor="Cyan"
+                TextColor="White"
+                FontSize="40"
+                AutomationId="ButtonAdd"
+                Clicked="Add_Clicked"/>
+            <Button Text="Multiply"
+                BackgroundColor="Blue"
+                TextColor="White"
+                FontSize="40"
+                AutomationId="ButtonMultiply"
+                Clicked="Multiply_Clicked"/>
+            <Label x:Name="ResultLabel"
+               AutomationId="LabelResult"
+               FontSize="40"></Label>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
